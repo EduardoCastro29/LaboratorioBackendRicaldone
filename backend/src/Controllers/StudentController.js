@@ -48,7 +48,7 @@ studentController.updateStudent = async (req, res) => {
       return res.status(400).json({ message: "fields required" });
     }
     // Validación de fecha
-    if ((birthdate) => newDate() || birthdate < newDate("1990-01-01")) {
+    if ((birthdate) > new Date || birthdate < new Date("1990-01-01")) {
       return res.status(400).json({ message: "invalid date" });
     }
 
@@ -68,13 +68,13 @@ studentController.updateStudent = async (req, res) => {
         new: true,
       },
     );
-    if (!studentUpdate) {
-      return res.status(404).json({ message: "student not found" });
+    if(!studentUpdate){
+        return res.status(404).json({message:"student not found"});
     }
-    return res.status(200).json({ message: "student updated" });
+    return res.status(200).json({message:"student updated"});
   } catch (errror) {
-    console.log("error" + errror);
-    return res.status(500).json({ message: "internal server error" });
+    console.log("error"+errror);
+    return res.status(500).json({message:"internal server error"});
   }
 };
 
