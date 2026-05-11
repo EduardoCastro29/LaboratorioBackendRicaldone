@@ -17,6 +17,8 @@ import teacherLogoutRoutes from "./src/Routes/TeacherLogoutRoute.js";
 import specialtieRoute from "./src/Routes/SpecialtieRoute.js";
 // Materias endPoint
 import subjectRoute from "./src/Routes/SubjectRoute.js";
+// Matrícula endPoint
+import tuitionRoute from "./src/Routes/TuitionRoute.js";
 const app = express();
 
 app.use(
@@ -45,6 +47,9 @@ app.use("/api/logoutTeacher",teacherLogoutRoutes);
 app.use("/api/specialtie",specialtieRoute);
 // Endpoints subject
 app.use("/api/subject",subjectRoute);
+// endpoint Tuition
+app.use("/api/tuition",tuitionRoute);
+
 
 
 
