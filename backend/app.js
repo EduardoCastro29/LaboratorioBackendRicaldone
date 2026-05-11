@@ -5,6 +5,7 @@ import studentRoutes from "./src/Routes/StudentRoute.js";
 import studentRegisterRoutes from "./src/Routes/StudentRegisterRoute.js";
 import studentLoginRoutes from "./src/Routes/StudentLoginRoute.js";
 import studentRecoveryPasswordRoutes from "./src/Routes/StudentRecoveryPasswordRoute.js";
+import studenLogoutRoutes from "./src/Routes/StudentLogoutRoute.js";
 const app = express();
 
 app.use(
@@ -21,5 +22,6 @@ app.use ("/api/student",studentRoutes);
 app.use ("/api/studentRegister",studentRegisterRoutes);
 app.use ("/api/loginStudent",studentLoginRoutes);
 app.use ("/api/recoveryPasswordStudent",studentRecoveryPasswordRoutes);
+app.use ("/api/logoutStudent",studenLogoutRoutes);
 
 export default app;
