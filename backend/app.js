@@ -12,6 +12,7 @@ import teacherRoutes from "./src/Routes/TeacherRoute.js";
 import teacherRegisterRoutes from "./src/Routes/TeacherRegisterRoute.js";
 import teacherLoginRoutes from "./src/Routes/TeacherLoginRoute.js"
 import teacherRecoveryPasswordRoutes from "./src/Routes/TeacherRecoveryPasswordRoute.js";
+import teacherLogoutRoutes from "./src/Routes/TeacherLogoutRoute.js";
 const app = express();
 
 app.use(
@@ -35,6 +36,7 @@ app.use ("/api/teacher",teacherRoutes);
 app.use("/api/teacherRegister",teacherRegisterRoutes);
 app.use("/api/loginTeacher",teacherLoginRoutes);
 app.use ("/api/recoveryPasswordTeacher",teacherRecoveryPasswordRoutes);
+app.use("/api/logoutTeacher",teacherLogoutRoutes);
 
 
 
