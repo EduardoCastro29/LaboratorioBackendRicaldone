@@ -9,6 +9,7 @@ import studentRecoveryPasswordRoutes from "./src/Routes/StudentRecoveryPasswordR
 import studenLogoutRoutes from "./src/Routes/StudentLogoutRoute.js";
 // Profesores endPoint
 import teacherRoutes from "./src/Routes/TeacherRoute.js";
+import teacherRegisterRoutes from "./src/Routes/TeacherRegisterRoute.js";
 const app = express();
 
 app.use(
@@ -29,6 +30,7 @@ app.use ("/api/recoveryPasswordStudent",studentRecoveryPasswordRoutes);
 app.use ("/api/logoutStudent",studenLogoutRoutes);
 // Endpoints teacher
 app.use ("/api/teacher",teacherRoutes);
+app.use("/api/teacherRegister",teacherRegisterRoutes);
 
 
 export default app;
