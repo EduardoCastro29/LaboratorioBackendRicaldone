@@ -13,6 +13,10 @@ import teacherRegisterRoutes from "./src/Routes/TeacherRegisterRoute.js";
 import teacherLoginRoutes from "./src/Routes/TeacherLoginRoute.js"
 import teacherRecoveryPasswordRoutes from "./src/Routes/TeacherRecoveryPasswordRoute.js";
 import teacherLogoutRoutes from "./src/Routes/TeacherLogoutRoute.js";
+// Especialidades endPoint
+import specialtieRoute from "./src/Routes/SpecialtieRoute.js";
+// Materias endPoint
+import subjectRoute from "./src/Routes/SubjectRoute.js";
 const app = express();
 
 app.use(
@@ -37,6 +41,12 @@ app.use("/api/teacherRegister",teacherRegisterRoutes);
 app.use("/api/loginTeacher",teacherLoginRoutes);
 app.use ("/api/recoveryPasswordTeacher",teacherRecoveryPasswordRoutes);
 app.use("/api/logoutTeacher",teacherLogoutRoutes);
+// Endpoints specialtie
+app.use("/api/specialtie",specialtieRoute);
+// Endpoints subject
+app.use("/api/subject",subjectRoute);
+
+
 
 
 
