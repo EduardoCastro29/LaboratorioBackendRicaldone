@@ -54,7 +54,7 @@ studentLoginController.login = async (req, res) => {
     // Genera el token
     const token = jsonwebtoken.sign(
       // #1 - Que datos vamos a guardar
-      { id: studentFound._id, userType: "Student" },
+      { id: studentFound._id, userType: "student" },
       // #2 - secret key
       config.JWT.SECRET,
       // #3 - cuando expira

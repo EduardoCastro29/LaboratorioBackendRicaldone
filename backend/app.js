@@ -4,6 +4,7 @@ import cors from "cors";
 import studentRoutes from "./src/Routes/StudentRoute.js";
 import studentRegisterRoutes from "./src/Routes/StudentRegisterRoute.js";
 import studentLoginRoutes from "./src/Routes/StudentLoginRoute.js";
+import studentRecoveryPasswordRoutes from "./src/Routes/StudentRecoveryPasswordRoute.js";
 const app = express();
 
 app.use(
@@ -19,6 +20,6 @@ app.use (cookieParser());
 app.use ("/api/student",studentRoutes);
 app.use ("/api/studentRegister",studentRegisterRoutes);
 app.use ("/api/loginStudent",studentLoginRoutes);
-
+app.use ("/api/recoveryPasswordStudent",studentRecoveryPasswordRoutes);
 
 export default app;
